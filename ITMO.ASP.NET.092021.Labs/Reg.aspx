@@ -21,7 +21,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" ErrorMessage="Заполните поле имени" ForeColor="Red">Не оставляйте поле пустым</asp:RequiredFieldValidator>
         </div>
         <div>
-         <label>Ваш email:l><asp:TextBox ID="email" runat="server"></asp:TextBox>
+         <label>Ваш email:</label><asp:TextBox ID="email" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Заполните поле адреса" ForeColor="Red" ControlToValidate="email">Не оставляйте поле пустым</asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="email" ErrorMessage="E-mail is not in a valid format" ValidationExpression="&quot;\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" Text="Адресс введен неверно!!!" Display="Dynamic"></asp:RegularExpressionValidator>
          </div>
@@ -34,6 +34,21 @@
         <asp:CheckBox ID="CheckBoxYN" runat="server" />
         </div>
         <div>
+             Введите название доклада:
+        <asp:TextBox ID="TextBoxTitle" runat="server" Width="345px"></asp:TextBox>
+        </div>
+        <div>
+             Введите аннотацию доклада:
+        <asp:TextBox ID="TextBoxTextAnnot" runat="server" Width="345px"></asp:TextBox>
+        </div> 
+        <div>
+             Введите название доклада:
+        <asp:TextBox ID="TextBoxTitle2" runat="server" Width="345px"></asp:TextBox>
+        </div>
+        <div>
+             Введите аннотацию доклада:
+        <asp:TextBox ID="TextBoxTextAnnot2" runat="server" Width="345px"></asp:TextBox>
+        </div>        <div>
         <button type="submit">Отправить ответ на приглашение RSVP</button>
         </div>
 </asp:Content>

@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data.Entity;
+using ITMO.ASP.NET._092021.Labs.App_Code;
 
 namespace ITMO.ASP.NET._092021.Labs
 {
@@ -28,6 +29,27 @@ namespace ITMO.ASP.NET._092021.Labs
                 {
                     Response.Redirect("sorryyoucantcome.html");
                 }
+                if (CheckBoxYN.Checked)
+                {
+                    Report report1 = new Report(TextBoxTitle.Text, TextBoxTextAnnot.Text);
+                    rsvp.Reports.Add(report1);
+                }
+                if (TextBoxTitle2.Text != "" || TextBoxTextAnnot2.Text != "")
+                {
+                    Report report2 = new Report(TextBoxTitle2.Text, TextBoxTextAnnot2.Text);
+                    rsvp.Reports.Add(report2);
+                }
+                try
+                {
+                    SampleContext context = new SampleContext();
+                    context.GuestResponses.Add(rsvp);
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    Response.Redirect("Ошибка " + ex.Message);
+                }
+
 
             }
 

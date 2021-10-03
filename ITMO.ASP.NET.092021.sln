@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ASP.NET.092021.Labs", "ITMO.ASP.NET.092021.Labs\ITMO.ASP.NET.092021.Labs.csproj", "{E64797C3-A5A1-4AA6-990E-5BD435029D1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCR1", "WebMVCR1\WebMVCR1.csproj", "{F9D132DF-6B40-418C-9F6A-CB7C336E07DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E64797C3-A5A1-4AA6-990E-5BD435029D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E64797C3-A5A1-4AA6-990E-5BD435029D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E64797C3-A5A1-4AA6-990E-5BD435029D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D132DF-6B40-418C-9F6A-CB7C336E07DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D132DF-6B40-418C-9F6A-CB7C336E07DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D132DF-6B40-418C-9F6A-CB7C336E07DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D132DF-6B40-418C-9F6A-CB7C336E07DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
