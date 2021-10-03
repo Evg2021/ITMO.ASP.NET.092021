@@ -22,7 +22,7 @@
              <div class="info">
                 Семинар состоится 1 января 2020 года в 7.30
              </div>
-        </div>
+     </div>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:Timer runat="server" Interval="1000"></asp:Timer>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Text;
 
 
-namespace ITMO.ASP.NET._092021.Labs
+namespace ITMO.ASP.NET._092021.Labs.App_Code
 {
     public partial class Summary : System.Web.UI.Page
     {
