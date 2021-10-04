@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using WebMVCR1.Models;
@@ -22,7 +23,14 @@ namespace WebMVCR1.Controllers
             //string Greeting = ModelClass.ModelHello() + ", " + hel;
             //return Greeting;
             //string res = ExeEnum();
-            string res = ExeStruct();
+            //string res = ExeStruct();
+            //string res = StudyCsharp.SetStatus(3);
+            //string res = StudyCsharp.ExeSwitch(StudyCsharp.SetStatus(3));
+            //string res = StudyCsharp.GetFunction(0, 9);
+            //string res = ExeFactorial(5);
+            //string res = ExeTriangle();
+            //string res = ExeCircle();
+            string res = ExePolim();
             return res;
         }
         public string ExeEnum()
@@ -48,5 +56,46 @@ namespace WebMVCR1.Controllers
             return res;
 
         }
+        public string ExeFactorial(int x)
+        {
+            int f;
+            bool ok = StudyCsharp.Factorial(x, out f);
+            if (ok)
+                return String.Format("Факториал числа {0} равен {1} ",
+                x, f);
+            else
+                return "Невозможно вычислить факториал";
+
+
+        }
+        public string ExeTriangle()
+        {
+            Triangle tr1 = new Triangle(3, 5, 6);
+            string sq1 = String.Format("Площадь фигуры {0} равна: {1:0.##}", tr1.Name, tr1.Area);
+            return sq1;
+        }
+        public string ExeCircle()
+        {
+            Circle cir1 = new Circle(3);
+            string sq = String.Format("Площадь фигуры {0} равна: {1:0.##}", cir1.Name, cir1.Area);
+            return sq;
+        }
+        public string ExePolim()
+        {
+            StringBuilder str = new StringBuilder();
+            Shape[] sh = 
+            {
+            new Triangle(1,2,3),
+            new Circle(5),
+            new Triangle(5,6,8)
+            };
+            foreach (Shape item in sh)
+            {
+                str.AppendFormat("Это фигура {0}", item.Name + "<p>");
+            }
+            return str.ToString();
+
+        }
     }
-}
+        
+ }
